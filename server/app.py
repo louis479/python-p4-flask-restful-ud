@@ -116,6 +116,10 @@ class NewsletterByID(Resource):
 
 api.add_resource(NewsletterByID, '/newsletters/<int:id>')
 
+@app.route('/')
+def home():
+    return "Welcome to the Newsletters API! Try /newsletters/20 endpoint", 200
+
 
 if __name__ == '__main__':
     app.run(port=5555, debug=True)
